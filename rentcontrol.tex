@@ -19,7 +19,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[letterpaper,11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+\documentclass[letterpaper,12pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
 
 \usepackage[protrusion=true,expansion=true]{microtype} % Better typography
 \usepackage{graphicx} % Required for including pictures
@@ -54,7 +54,8 @@
   {\normalfont\sffamily\normalsize\bfseries}
   {\thesection}{}{}
 
-
+% control line spacing
+% \usepackage{setspace}
 
 \usepackage[T1]{fontenc} % Required for accented characters
 \usepackage[utf8]{inputenc}
@@ -114,6 +115,7 @@ Morbi tempor congue porta. Proin semper, leo vitae faucibus dictum, metus mauris
 %	ESSAY BODY
 %----- q-----------------------------------------------------------------------------------
 
+% \singlespacing
 {\sffamily\tableofcontents}
 \setcounter{secnumdepth}{-2}
 
@@ -122,13 +124,15 @@ Morbi tempor congue porta. Proin semper, leo vitae faucibus dictum, metus mauris
 \listoffigures
 \let\numberline\oldnumberline% Restore \numberline (if needed)
 
+% \onehalfspacing % spacing!!!
+% \setlength{\parskip}{0.5em} % space between paras
 \input{partone}
 
 %------------------------------------------------
 
 %------------------------------------------------
 
-\section*{Conclusion}
+\section{Conclusion}
 
 
 \begin{enumerate}
@@ -143,6 +147,7 @@ Donec luctus tincidunt mauris, non ultrices ligula aliquam id. Sed varius, magna
 %----------------------------------------------------------------------------------------
 
 
+% \setlength{\parskip}{0em} % reset paragraph spacing
 \input{bib.tex}
 
 
