@@ -19,13 +19,14 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+\documentclass[letterpaper,11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
 
 \usepackage[protrusion=true,expansion=true]{microtype} % Better typography
 \usepackage{graphicx} % Required for including pictures
 \usepackage{wrapfig} % Allows in-line images
 \usepackage[labelfont=bf]{caption}
 
+% configure links
 \usepackage{hyperref}   
 
 \hypersetup{
@@ -33,12 +34,31 @@
     allcolors=blue
 }
 
+% footnotes at the bottom
 \usepackage[bottom]{footmisc}
 
 
-\usepackage{mathpazo} % Use the Palatino font
+% \usepackage{mathpazo} % Use the Palatino font
+\usepackage{times} % use times new roman
+\usepackage{helvet}
+
+% for changing section & subsection fonts
+\usepackage{titlesec}
+
+% get section and subsection to be in helvet
+\titleformat{\section}
+  {\normalfont\sffamily\Large\bfseries}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\sffamily\normalsize\bfseries}
+  {\thesection}{}{}
+
+
+
 \usepackage[T1]{fontenc} % Required for accented characters
-\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+\usepackage[utf8]{inputenc}
+% \linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
 
 \makeatletter
 \renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
@@ -61,8 +81,8 @@
 %	TITLE
 %----------------------------------------------------------------------------------------
 
-\title{\textbf{Actually, Rent Control Is Great}\\ % Title
-Revisiting Ontario's Experience, the Supply of Housing, and Security of Tenure} % Subtitle
+\title{\textsf{\textbf{Actually, Rent Control Is Great}\\ % Title
+Revisiting Ontario's Experience, the Supply of Housing, and Security of Tenure}} % Subtitle
 
 \author{\textsc{Phillip Mendonça-Vieira} % Author
 \\{\textit{Federation of Metro Tenants Association}}} % Institution
@@ -79,7 +99,8 @@ Revisiting Ontario's Experience, the Supply of Housing, and Security of Tenure} 
 %	ABSTRACT AND KEYWORDS
 %----------------------------------------------------------------------------------------
 
-%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+% ensure abstractname is also in helvet
+\renewcommand{\abstractname}{\sffamily{Abstract}} % Uncomment to change the name of the abstract to something else
 
 \begin{abstract}
 Morbi tempor congue porta. Proin semper, leo vitae faucibus dictum, metus mauris lacinia lorem, ac congue leo felis eu turpis. Sed nec nunc pellentesque, gravida eros at, porttitor ipsum. Praesent consequat urna a lacus lobortis ultrices eget ac metus. In tempus hendrerit rhoncus. Mauris dignissim turpis id sollicitudin lacinia. Praesent libero tellus, fringilla nec ullamcorper at, ultrices id nulla. Phasellus placerat a tellus a malesuada.
@@ -93,14 +114,13 @@ Morbi tempor congue porta. Proin semper, leo vitae faucibus dictum, metus mauris
 %	ESSAY BODY
 %----- q-----------------------------------------------------------------------------------
 
-\tableofcontents
+{\sffamily\tableofcontents}
 \setcounter{secnumdepth}{-2}
 
 \let\oldnumberline\numberline% Copy \numberline into \oldnumberline
 \renewcommand{\numberline}[1]{\hspace*{-1.5em}}% Remove number argument
 \listoffigures
 \let\numberline\oldnumberline% Restore \numberline (if needed)
-\listoffigures
 
 \input{partone}
 
