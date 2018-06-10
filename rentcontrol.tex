@@ -26,17 +26,8 @@
 \usepackage{wrapfig} % Allows in-line images
 \usepackage[labelfont=bf]{caption}
 
-% configure links
-\usepackage{hyperref}   
-
-\hypersetup{
-    colorlinks=true,
-    allcolors=blue
-}
-
 % footnotes at the bottom
 \usepackage[bottom]{footmisc}
-
 
 % \usepackage{mathpazo} % Use the Palatino font
 \usepackage{times} % use times new roman
@@ -63,6 +54,16 @@
 \usepackage[T1]{fontenc} % Required for accented characters
 \usepackage[utf8]{inputenc}
 % \linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+% configure links
+% IMPORT IT LAST
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    allcolors=blue
+}
+
 
 \makeatletter
 \renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
