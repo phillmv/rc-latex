@@ -21,6 +21,7 @@
 
 \documentclass[letterpaper,12pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
 
+
 \usepackage[protrusion=true,expansion=true]{microtype} % Better typography
 \usepackage{graphicx} % Required for including pictures
 \usepackage{wrapfig} % Allows in-line images
@@ -29,9 +30,20 @@
 % footnotes at the bottom
 \usepackage[bottom]{footmisc}
 
+% quotes
+\usepackage [autostyle=false]{csquotes}
+\MakeOuterQuote{"}
+
+
+% LuaTeX fonts:
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{TeX Gyre Heros} % Helvetica
+% pdftex shit
 % \usepackage{mathpazo} % Use the Palatino font
-\usepackage{times} % use times new roman
-\usepackage{helvet}
+% \usepackage{times} % use times new roman
+% \setmainfont{Times New Roman}
+% \usepackage{helvet}
 
 % for changing section & subsection fonts
 \usepackage{titlesec}
@@ -51,8 +63,8 @@
 % control line spacing
 % \usepackage{setspace}
 
-\usepackage[T1]{fontenc} % Required for accented characters
-\usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc} % Required for accented characters
+% \usepackage[utf8]{inputenc}
 % \linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
 
 % configure links
